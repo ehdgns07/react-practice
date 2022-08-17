@@ -1,0 +1,15 @@
+GET /users
+Host: jsonplaceholder.typicode.com
+Content-Type: application/json
+
+###
+
+PUT /posts/1
+Host: jsonplaceholder.typicode.com
+Content-Type: application/json
+
+{
+  "userId" : 1,
+  "title" : "testTitle",
+  "body" : "test Body"
+}
