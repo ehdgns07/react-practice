@@ -23,6 +23,9 @@ import Controll from "./components/Controll";
 import Parent from "./components/Parent";
 import Child from "./components/Child";
 import Page from "./hooks/useContext/Page";
+import {ThemeContext} from "./contexts/ThemeContext";
+import UseReducer from "./hooks/useReducer/UseReducer";
+import UseReducer2 from "./hooks/useReducer/UseReducer2";
 
 function App() {
 
@@ -37,8 +40,11 @@ function App() {
     const content = ["열공해라", "잘 할거다", "놀자"];
     const [showWork,setShowWork] = useState(false);
 
+    //context
+    const [isDark, setIsDark] = useState(false);
+    // console.log(isDark);
 
-  return (
+    return (
     // <div className="App">
     //   {/* <header className="App-header">
     //   <h1>Hello React</h1>
@@ -78,6 +84,8 @@ function App() {
     // </div>
 
     // ver 2
+
+
     <div>
       {/*  도서관  */}
       {/*<Library></Library>*/}
@@ -106,7 +114,15 @@ function App() {
     {/*    <Parent>*/}
     {/*        <Child/>*/}
     {/*    </Parent>*/}
-        <Page/>
+
+        {/*    context ver1*/}
+    {/*    <Page isDark={isDark} setIsDark={setIsDark}/>*/}
+        {/*    context ver2*/}
+
+        {/*<ThemeContext.Provider value={{isDark, setIsDark}}>*/}
+        {/*<Page/>*/}
+        {/*</ThemeContext.Provider>*/}
+        <UseReducer2></UseReducer2>
      </div>
 
   );
